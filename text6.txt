@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-updated 3-ed time
-=======
-updated text
->>>>>>> newbranch
