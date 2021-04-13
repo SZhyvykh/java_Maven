@@ -4,12 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import pages.Welcome;
 
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
     private String url;
+    protected Welcome welcomePage;
 
     @BeforeClass
     public void setUp() {
@@ -20,6 +22,7 @@ public class BaseTest {
       System.out.println(driver.getTitle());
       driver.manage().window().maximize();
       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      welcomePage = new Welcome(driver);
     }
 
     @AfterClass
