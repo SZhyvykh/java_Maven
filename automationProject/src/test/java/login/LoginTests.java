@@ -8,6 +8,7 @@ public class LoginTests extends BaseTest {
 
    @Test
     public void testLogin() {
+       log.info("Starting testLoginTest");
     var loginPage =welcomePage.clickFormAuthLink();
        loginPage.inputUserName("tomsmith");
        loginPage.inputPassword("SuperSecretPassword!");
