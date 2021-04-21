@@ -19,15 +19,15 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
-      System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-      url = "http://the-internet.herokuapp.com/";
-      driver = new ChromeDriver();
-      log.info("Page opened: " + url);
-      driver.get(url);
-      System.out.println(driver.getTitle());
-      driver.manage().window().maximize();
-      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-      welcomePage = new Welcome(driver);
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        url = "http://the-internet.herokuapp.com/";
+        driver = new ChromeDriver();
+        log.info("Page opened: " + url);
+        driver.get(url);
+        System.out.println(driver.getTitle());
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        welcomePage = new Welcome(driver);
 
     }
 
@@ -36,9 +36,6 @@ public class BaseTest {
         driver.quit();
         log.info("Browser closed");
     }
-
-
-
 
 
 }

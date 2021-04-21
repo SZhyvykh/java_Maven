@@ -14,9 +14,8 @@ public class LoginTests extends BaseTest {
        loginPage.inputPassword("SuperSecretPassword!");
 
     var secureArea = loginPage.clickLogin();
-    Assert.assertEquals(secureArea.getSuccessLoginText(), " You logged out of the secure area!",
-                                                          "login failed");
-
+    Assert.assertTrue(secureArea.getSuccessLoginText().contains("You logged into a secure area!"),
+                                                          "Login failed");
    }
 
 }
